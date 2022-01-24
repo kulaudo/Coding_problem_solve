@@ -1,5 +1,7 @@
 import unittest
-def solution(string):
+
+
+def is_unique_string(string):
   if not string:
     return False
   
@@ -38,17 +40,17 @@ def solution(string):
 class Test(unittest.TestCase):
   
   def test1(self):
-    self.assertTrue(solution('abcd'))
+    self.assertTrue(is_unique_string('abcd'))
   
   def test2(self):
-    self.assertTrue(solution('a'))
+    self.assertTrue(is_unique_string('a'))
 
   def test3(self):
-    self.assertFalse(solution(''))
+    self.assertFalse(is_unique_string(''))
 
   def test4(self):
-    self.assertFalse(solution('aab'))
+    self.assertFalse(is_unique_string('aab'))
 
 if __name__ == '__main__':
-    unittest.main()
+  unittest.main()
   

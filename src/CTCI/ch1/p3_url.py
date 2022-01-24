@@ -6,6 +6,7 @@ def solution(String):
   def use_lib(String):
     return r'%20'.join(String.split(' '))
   
+  # Time: O(N) Space:O(1)
   def two_pointer(String):
     space_count = 0
     for c in String:
@@ -42,4 +43,4 @@ class Test(unittest.TestCase):
     self.assertEqual(solution('aab'),'aab')
 
 if __name__ == '__main__':
-    unittest.main()
+  unittest.main()

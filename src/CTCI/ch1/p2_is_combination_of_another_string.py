@@ -12,7 +12,7 @@ def solution(A,B):
     # T:O(A+B), S:O(A+B)
     countA = Counter(A)
     countB = Counter(B)
-    for k, v in countA.items():
+    for k, v in countA:
       if k not in countB or v > countB[k]:
         return False
     return True
@@ -50,5 +50,5 @@ class Test(unittest.TestCase):
     self.assertFalse(solution('a','bcd'))
 
 if __name__ == '__main__':
-    unittest.main()
+  unittest.main()
   

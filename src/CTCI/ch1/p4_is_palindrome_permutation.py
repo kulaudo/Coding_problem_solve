@@ -5,12 +5,9 @@ def solution(String):
   def hash_table(String):
     # T: O(N) S:O(N)
     from collections import Counter
-    has_1 = 0
     k_has_1 = None
-    has_2 = 0
-    d = Counter(String).items()
-    
-    for k,v in d:
+
+    for k,v in Counter(String).items():
       if v % 2 == 1:        
         if k_has_1 is None:
           k_has_1 = k
@@ -52,4 +49,4 @@ class Test(unittest.TestCase):
     self.assertTrue(solution('ababa'))
 
 if __name__ == '__main__':
-    unittest.main()
+  unittest.main()
